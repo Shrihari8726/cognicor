@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router }  from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
     
    }
   showButton: boolean = false;
@@ -17,9 +18,23 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.authService.userDetails$
       .subscribe(user => {
-        this.userName = user['displayName'];
+        if(user['displayName']!= null){
+          this.userName = user['displayName'];
+        } else {
+          this.userName = user['email'];
+        }
+ 
         this.showButton = true;
       })
   }
 
+  toLogout(){
+    this.userName = null;
+    this.showButton = false;
+    this.router.navigate(['/']);
+  }
+
+  toPriflePage(){
+    this.router.navigate(['/profile']);
+  }
 }

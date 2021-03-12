@@ -1,19 +1,21 @@
 
   <div class='loginBox'>
     <div class='formBox'>
+      <form [formGroup]="LoginForm" (ngSubmit)="loginSubmit()">
         <label class='padb10'>Login</label>
         <div class="input-group flex-nowrap padb10">
           <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user"></i></span>
-          <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
+          <input type="text" class="form-control" placeholder="Email" formControlName = "email" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap padb20">
           <span class="input-group-text" id="addon-wrapping"><i class="fa fa-lock"></i></span>
-          <input type="text" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+          <input type="password" class="form-control" placeholder="Password" formControlName = "password" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
         <div class="btn-group  padb20 padt10">
           <button type="submit" class="btn btn-style"><span><i class="fa fa-key"></i>&nbsp;</span>Submit</button>
           <div class="forgetLink"><a>Forgot your password?</a></div>
       </div>
+    </form>
       <ng-container *ngIf=false>{{error.msg}}</ng-container>
       <h2><span>OR</span></h2>
       <div class="input-group flex-nowrap padb10 padt10">

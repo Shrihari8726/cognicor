@@ -25,7 +25,18 @@ export class AuthService {
       this._userDetails.next(res.user);
       this.router.navigate(['/home']);
     }).catch((err) => {
-      console.log(err);
+      alert(err.message);
+    });
+  }
+
+  async logInWithEmail(obj){
+    console.log(obj)
+    await this.fireAuth.signInWithEmailAndPassword(obj.email, obj.password).then(res => {
+      this._userDetails.next(res.user);
+      this.router.navigate(['/home']);
+    }).catch((err) => {
+
+      alert(err.message);
     });
   }
 

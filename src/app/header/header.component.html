@@ -1,5 +1,5 @@
 <div class="headerClass">
-  <h3 style="padding:2px;color:#FFF">Welcome {{userName ? userName : "Guest"}}</h3>  
+  <h5 style="padding:7px;color:#FFF">Welcome {{userName ? userName : "Guest"}}</h5>  
   <div *ngIf="showButton;then Visible else Hidden"></div>
   <ng-template #Visible>
     <div class="input-group1">
