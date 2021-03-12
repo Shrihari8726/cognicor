@@ -1,0 +1,11 @@
+<div class="headerClass">
+  <h3 style="padding:2px;color:#FFF">Welcome {{userName ? userName : "Guest"}}</h3>  
+  <div *ngIf="showButton;then Visible else Hidden"></div>
+  <ng-template #Visible>
+    <div class="input-group1">
+      <button type="submit" class="btn btn-light height35" (click)='toPriflePage()'>Profile</button>
+      <button type="submit" class="btn btn-light height35" (click)='toLogout()'>Logout</button>
+    </div>
+  </ng-template>
+  <ng-template #Hidden></ng-template>
+</div>
