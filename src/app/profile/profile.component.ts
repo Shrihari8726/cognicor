@@ -14,9 +14,13 @@ export class ProfileComponent implements OnInit {
   email:string = '';
   ngOnInit(): void {
     if(this.authService.user){
-    this.displayName = this.authService.user['displayName'];
-    this.imgSrc = this.authService.user['photoURL'] ? this.authService.user['photoURL'] : 'http://www.pngmart.com/files/10/User-Account-Person-PNG-File.png';
-    this.email = this.authService.user['email'];
+      this.displayName = this.authService.user['displayName'];
+      this.imgSrc = this.authService.user['photoURL'] ? this.authService.user['photoURL'] : 'http://www.pngmart.com/files/10/User-Account-Person-PNG-File.png';
+      this.email = this.authService.user['email'];
+    } else {
+      this.displayName = localStorage.getItem('displayName');
+      this.imgSrc = localStorage.getItem('photoURL') ? localStorage.getItem('photoURL') : 'http://www.pngmart.com/files/10/User-Account-Person-PNG-File.png';
+      this.email = localStorage.getItem('email');
     }
   }
 

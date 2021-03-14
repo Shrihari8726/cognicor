@@ -1,6 +1,36 @@
 <div class="homeBox">
     <div class="homeHeader">
-        <p class="title">Airlines Performance</p>
+      <p class="title">Airlines Performance</p>
     </div>
-</div>
+    <div class="headerCard">
+      <span>DashBoard Tabber</span>
+      <div class="header-border"></div>
+      <div class="navigationHolder">
+          <div class='navBtn navColor'>Airlines Performance</div>
+          <div class='navBtn'>Retail Distribution</div>
+          <div class='navBtn'>Florida Real Estate</div>
+      </div>
+    </div>
+    <div class="dataCards">
+      <div class="dataCard1" *ngFor="let card of cards">
+        <span>{{card.cardTitle}}</span>
+        <div class=cardDataHolder>
+          <div class='cardData'>{{card.cardData}}
+          </div>
+          <div class='cardData-border'></div>
+          <div class='pastDav'>Past Dav {{card.davPast}}</div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="chartCards">
+    <div class="chartCard">
+        <span>Passenger Population Pyramid</span>
+    </div>
+    <div class="chartCard">
+        <span># Flights from Top 1S Origin to Dest</span>
+        <app-chord-diagram></app-chord-diagram>
+    </div>
+    </div>
 
+  </div>

@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChordDiagramComponent } from './chord-diagram/chord-diagram.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCr77sqzVkxM_dAo3tiwVB5hNq7zpSsLC4",
@@ -31,7 +32,8 @@ var firebaseConfig = {
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    ChordDiagramComponent
   ],
   imports: [
     BrowserModule,

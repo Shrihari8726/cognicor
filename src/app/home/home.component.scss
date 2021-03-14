@@ -1,23 +1,140 @@
-.homeBox{
+.homeBox {
     margin: 10px;
-    display:flex;
-}
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardData {
+    position: relative;
+    left: 75px;
+    padding-top: 5px;
+    font-weight: 500;
+    font-family: system-ui;
+    color: #3a9494;
+    font-size: 24px;
+  }
 
-.homeHeader {
+  .navigationHolder{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 550px; 
+    height: 50px; 
+    margin:0 auto;
+  }
+
+  .navBtn{
+      display: flex;
+      height:30px;
+      width:180px;
+      background-color: #e4e4e4;
+      color: rgb(0, 0, 0);
+      border-radius: 3px;
+      border: 1px solid #cecece;
+      justify-content: center;
+  }
+
+  .navColor{
+    background-color: #38d2d2;
+    color: #FFF;
+  }
+
+
+
+  .cardDataHolder {}
+  
+  .homeHeader {
     background-color: #2159b5;
     width: 100%;
     height: 45px;
     border-radius: 12px;
     box-shadow: 5px 5px 6px 0px #ccc;
-}
+    margin-bottom: 10px;
+  }
+  
+  span {
+    padding: 15px;
+    position: relative;
+    top: 4px;
+    color: rgb(82, 82, 156);
+    font-size: 14px;
+    font-weight: 400;
+  }
 
-.title{
+  .pastDav{
+    font-size: 12px;
+    position: relative;
+    left: 75px;
+    bottom: 6px;
+    display: inline-block;
+  }
+  
+  .header-border {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #e4e4e4;
+    margin: 5px auto;
+  }
+  
+  .cardData-border {
+    display: block;
+    width: 75px;
+    height: 1px;
+    background: #e4e4e4;
+    margin: 5px auto;
+  }
+  
+  .headerCard {
+    background-color: #fff;
+    width: 100%;
+    height: 85px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 6px 0px #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .dataCard1 {
+    background-color: #fff;
+    width: 215px;
+    height: 95px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 6px 0px #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .dataCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .chartCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .chartCard {
+    background-color: #fff;
+    width: 660px;
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 6px 0px #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .title {
     display: flex;
     position: relative;
     top: 10px;
     font-weight: 400;
-    color: #FFF;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     justify-content: center;
-    
-}
+  }
+  
