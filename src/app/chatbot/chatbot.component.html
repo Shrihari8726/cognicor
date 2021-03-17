@@ -1,0 +1,33 @@
+<div *ngIf="chatBot1; then loaded else loading"></div>
+
+<ng-template #loaded>
+    <div class="chatBotConsole">
+        <div class="chatHeader">
+            <div style='font-weight:400;'>Ask CIRA</div>
+            <div class=icons>
+                <i class="fa fa-heart-o pad5" aria-hidden="true"></i>
+                <i class="fa fa-commenting pad5" aria-hidden="true"></i>
+                <i class="fa fa-volume-off pad5" aria-hidden="true"></i>
+                <i class="fas fa-book-open pad5"></i>
+                <i class="fas fa-redo-alt pad5"></i>
+                <i class="fas fa-times pad5" (click)=toggleBot()></i>
+            </div>
+        </div> 
+        <div class="header-border"></div>
+        <div class="chat-window">
+            <div class='message{{i}} message' *ngFor="let obj of chatArr; let i = index">{{obj.name | uppercase}}: {{obj.msg}}</div>
+        </div>
+        <div *ngIf='typing' class='typing'>Bot is typing...</div>
+        <div class="header-border"></div>
+        <div class='footer'>
+        <input type='text' placeholder="Ask something" #message name="userMsg" style='width:70%' />
+        <i class="fas fa-location-arrow rotate" (click)=pushUserMsg(message.value)></i>
+        </div>
+    </div>
+ </ng-template>
+ 
+ <ng-template #loading>
+    <div class='chatBot' (click)=toggleBot()><span>Chat Bot</span></div>
+ </ng-template>
+
+

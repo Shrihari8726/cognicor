@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
+import {CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // 1. Importing firebase the libs
 import { AngularFireModule } from '@angular/fire';
@@ -15,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ChordDiagramComponent } from './chord-diagram/chord-diagram.component';
+import { PopulationPyramidComponent } from './population-pyramid/population-pyramid.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyCr77sqzVkxM_dAo3tiwVB5hNq7zpSsLC4",
@@ -33,11 +36,15 @@ var firebaseConfig = {
     HomeComponent,
     HeaderComponent,
     ProfileComponent,
-    ChordDiagramComponent
+    ChordDiagramComponent,
+    PopulationPyramidComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
